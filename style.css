@@ -14,10 +14,9 @@ img {
   height: 100vh;
 }
 section {
-  background: url("https://picsum.photos/1080/720");
+  background: var(--background);
   background-repeat: no-repeat;
   background-position: center center;
-  /* filter: opacity(0.9); */
   background-size: cover;
   width: 100%;
   height: 100vh;

@@ -1,3 +1,23 @@
+function updateBackgroundImage() {
+    const imageIndexArray = [10, 11, 14, 29, 37, 44, 49, 58, 61, 83, 84, 85, 95, 100, 98, 101, 107, 108, 116, 124, 131, 135, 141, 152, 155]; // Array of image IDs or indices
+
+    const randomIndex = Math.floor(Math.random() * imageIndexArray.length);
+    const randomImageId = imageIndexArray[randomIndex];
+
+    const imageUrl = `https://picsum.photos/id/${randomImageId}/1080/720`;
+
+    const updateBackground = () => {
+        document.documentElement.style.setProperty('--background', `url("${imageUrl}")`);
+    };
+
+    setTimeout(updateBackground, 0);
+}
+
+updateBackgroundImage();
+setInterval(updateBackgroundImage, 5000);
+
+
+
 
 function updateQuote() {
     const thoughtElement = document.querySelector('.thought');
@@ -28,4 +48,4 @@ function updateQuote() {
 }
 
 updateQuote();
-setInterval(updateQuote, 10000);
+setInterval(updateQuote, 5025);
