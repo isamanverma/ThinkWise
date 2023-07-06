@@ -1,0 +1,2 @@
+# ThinkWise
+Random Quote Generator
