@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+body {
+  margin: 0;
+  padding: 0;
+}
+:where(h1, h2, h3, p) {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+  height: 100vh;
+}
+section {
+  background: url("https://picsum.photos/1080/720");
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* filter: opacity(0.9); */
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+#shadow-host-companion {
+  display: none;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+h1 {
+  padding: 0.25rem 1em;
+  text-align: left;
+  width: 80%;
+  font-size: 3.5rem;
+  line-height: 1.25em;
+  color: black;
+  -webkit-text-stroke: 1px white;
+  background: rgba(238, 237, 255, 0.547);
+}
+h1::before {
+  z-index: 0;
+  font-family: "Times New Roman", Times, serif;
+  -webkit-text-stroke: 1.5px black;
+  color: transparent;
+  font-size: 7.5rem;
+  position: absolute;
+  left: 85px;
+  top: 27.5%;
+  content: open-quote;
+}
+
+.author {
+  padding: 0 1.5rem;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 0.5px 0.5px black;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  background: rgba(238, 237, 255, 0.547);
+  position: relative;
+  left: 30%;
+}
+
+.category {
+  display: inline;
+  padding: 0 2.5rem;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+  background: rgba(128, 128, 128, 0.291);
+  text-shadow: 1px 1px black;
+  position: relative;
+  top: 25%;
+  left: -30%;
+}
+
+@media screen and (width<768px) {
+  .quote {
+    position: absolute;
+    top: -20%;
+  }
+  section {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .author {
+    padding: 0;
+    margin-right: 5.5rem;
+    font-size: 1.2rem;
+  }
+
+  .category {
+    all: unset;
+    position: fixed;
+    top: 0;
+    right: 1rem;
+    margin: 0.5em 0.3em;
+    padding: 0.1rem;
+    font-family: "Poppins";
+    background: rgba(0, 0, 0, 0.123);
+  }
+  h1 {
+    text-align: left;
+    padding: 0;
+    padding-block: 1.5rem;
+    padding-left: 3rem;
+  }
+  h1::before {
+    font-size: 5rem;
+    left: 20px;
+    top: 37.7%;
+  }
+}
