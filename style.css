@@ -58,6 +58,7 @@ h1::before {
   left: 85px;
   top: 27.5%;
   content: open-quote;
+  display: none;
 }
 
 .author {
@@ -73,6 +74,7 @@ h1::before {
 }
 
 .category {
+  text-transform: capitalize;
   display: inline;
   padding: 0 2.5rem;
   font-weight: bold;
@@ -80,15 +82,18 @@ h1::before {
   color: white;
   background: rgba(128, 128, 128, 0.291);
   text-shadow: 1px 1px black;
-  position: relative;
-  top: 25%;
-  left: -30%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 @media screen and (width<768px) {
   .quote {
     position: absolute;
-    top: -20%;
+    top: -10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   section {
     width: 100%;
@@ -105,23 +110,26 @@ h1::before {
 
   .category {
     all: unset;
+    text-transform: capitalize;
     position: fixed;
     top: 0;
     right: 1rem;
     margin: 0.5em 0.3em;
     padding: 0.1rem;
+    color: white;
     font-family: "Poppins";
     background: rgba(0, 0, 0, 0.123);
   }
   h1 {
     text-align: left;
     padding: 0;
-    padding-block: 1.5rem;
-    padding-left: 3rem;
+    padding: 1.5rem;
+
   }
   h1::before {
     font-size: 5rem;
     left: 20px;
     top: 37.7%;
+    display: none;
   }
 }
